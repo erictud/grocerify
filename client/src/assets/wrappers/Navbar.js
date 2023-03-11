@@ -1,12 +1,14 @@
 import styled from "styled-components";
 
-const Wrapper = styled.nav`
+const Wrapper = styled.header`
   width: auto;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
+  padding: 1rem 0.5rem;
+  border-bottom: 2px solid;
+  border-image: linear-gradient(90deg, var(--primary-800), var(--primary-500)) 1;
 
   .nav-button,
   .flag {
@@ -17,25 +19,16 @@ const Wrapper = styled.nav`
 
   .nav-button {
     display: block;
+    width: 4rem;
     font-size: 3rem;
+    z-index: 10;
     color: black;
     cursor: pointer;
   }
 
   .logo-container {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    font-size: 2.5rem;
-    font-weight: 700;
-    font-style: italic;
-    gap: 0.3rem;
-    text-transform: lowercase;
-    color: green;
-
-    span {
-      padding-top: 1.2rem;
-      font-size: 3rem;
+    img {
+      width: 4rem;
     }
   }
 
@@ -47,18 +40,19 @@ const Wrapper = styled.nav`
   }
 
   .user-container {
+    cursor: pointer;
     display: flex;
     flex-direction: row;
     align-items: center;
     gap: 0.5rem;
-  }
+    padding-right: 1.5rem;
 
-  .user-img {
-    font-size: 2rem;
-    color: white;
-    background-color: teal;
-    padding: 0.5rem 1rem;
-    border-radius: 100%;
+    div {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      font-size: 1.5rem;
+    }
   }
 
   .username {

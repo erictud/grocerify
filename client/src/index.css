@@ -5,4 +5,44 @@ body {
   padding: 0;
   font-size: 10px;
   font-family: "Lato", sans-serif;
+  background-color: var(--back-col);
+}
+
+:root {
+  /* background */
+  --back-col: #f0f4f8;
+  /* colors */
+  --primary-50: #f0fdf4;
+  --primary-100: #dcfce7;
+  --primary-200: #bbf7d0;
+  --primary-300: #86efac;
+  --primary-400: #4ade80;
+  --primary-500: #22c55e;
+  --primary-600: #16a34a;
+  --primary-700: #15803d;
+  --primary-800: #166534;
+  --primary-900: ##14532d;
+
+  /* grey */
+  --grey-50: #ecfdf5;
+  --grey-100: #d1fae5;
+  --grey-200: #a7f3d0;
+  --grey-300: #6ee7b7;
+  --grey-400: #34d399;
+  --grey-500: #10b981;
+  --grey-600: #059669;
+  --grey-700: #047857;
+  --grey-800: #065f46;
+  --grey-900: #064e3b;
+  /* rest of the colors */
+  --black: #222;
+  --white: #fff;
+  --red-light: #f8d7da;
+  --red-dark: #842029;
+  --blue-light: #67e8f9;
+  --blue-dark: #0369a1;
+}
+
+.page {
+  padding: 2rem;
 }

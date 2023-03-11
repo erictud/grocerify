@@ -1,4 +1,3 @@
-import Navbar from "./layout/Navbar";
+import Layout from "./layout/Layout";
 import Logo from "./layout/Logo";
-
-export { Navbar, Logo };
+export { Layout, Logo };
