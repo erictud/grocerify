@@ -1,7 +1,6 @@
 import Wrapper from "../../assets/wrappers/Navbar";
 import { RiBarChartHorizontalLine } from "react-icons/ri";
 import { IoIosArrowDown } from "react-icons/io";
-import Logo from "./Logo";
 import { useAppContext } from "../../context/appContext";
 
 export default function Navbar() {
@@ -9,18 +8,15 @@ export default function Navbar() {
 
   return (
     <Wrapper>
-      <button className="nav-button" onClick={toggleNav}>
-        {showNav ? "X" : <RiBarChartHorizontalLine />}
-      </button>
-      <div className="logo-container">
-        <Logo />
-      </div>
-      <div className="info-container">
+      <div className="navbar">
+        <button onClick={toggleNav} className="btn-open">
+          <RiBarChartHorizontalLine />
+        </button>
+        <h3 className="title">List wow</h3>
         <div className="user-container">
-          <h4 className="username">Username</h4>
-          <div>
-            <IoIosArrowDown />
-          </div>
+          <h3>U</h3>
+          <h4>username</h4>
+          <IoIosArrowDown />
         </div>
       </div>
     </Wrapper>

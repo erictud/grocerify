@@ -1,74 +1,56 @@
 import styled from "styled-components";
 
 const Wrapper = styled.header`
-  width: auto;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 0.5rem;
-  border-bottom: 2px solid;
-  border-image: linear-gradient(90deg, var(--primary-800), var(--primary-500)) 1;
-
-  .nav-button,
-  .flag {
-    background-color: transparent;
-    border: none;
-    color: black;
-  }
-
-  .nav-button {
-    display: block;
-    width: 4rem;
-    font-size: 3rem;
-    z-index: 10;
-    color: black;
-    cursor: pointer;
-  }
-
-  .logo-container {
-    img {
-      width: 4rem;
-    }
-  }
-
-  .info-container {
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 0 2rem;
+    width: calc(100% - 3rem);
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 3rem;
+    justify-content: space-between;
+    background-color: white;
+  }
+
+  .btn-open {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+
+    svg {
+      font-size: 3.5rem;
+    }
+  }
+
+  .title {
+    font-size: 2.3rem;
+    font-weight: 900;
   }
 
   .user-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
     cursor: pointer;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 0.5rem;
-    padding-right: 1.5rem;
 
-    div {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      font-size: 1.5rem;
+    h4 {
+      font-size: 2rem;
+      font-weight: 400;
     }
-  }
 
-  .username {
-    font-size: 1.5rem;
-  }
+    h3 {
+      font-size: 2rem;
+      background-color: var(--primary-400);
+      padding: 1rem 1.5rem;
+      border-radius: 100%;
+    }
 
-  .language-container {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 0.5rem;
-  }
-
-  .flag img {
-    width: 2rem;
-    height: 1rem;
+    svg {
+      font-size: 2rem;
+    }
   }
 `;
 

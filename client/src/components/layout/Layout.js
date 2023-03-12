@@ -5,10 +5,14 @@ import Sidebar from "./Sidebar";
 export default function Layout({ children }) {
   return (
     <>
-      <Navbar />
-      <Sidebar />
       <div className="page">
-        <Outlet />
+        <Sidebar />
+        <div className="col-2">
+          <Navbar />
+          <div className="content">
+            <Outlet />
+          </div>
+        </div>
       </div>
     </>
   );

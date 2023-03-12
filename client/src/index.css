@@ -8,6 +8,10 @@ body {
   background-color: var(--back-col);
 }
 
+* {
+  font-size: 10px;
+}
+
 :root {
   /* background */
   --back-col: #f0f4f8;
@@ -41,8 +45,4 @@ body {
   --red-dark: #842029;
   --blue-light: #67e8f9;
   --blue-dark: #0369a1;
-}
-
-.page {
-  padding: 2rem;
 }
