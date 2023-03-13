@@ -4,7 +4,7 @@ import { IoIosArrowDown } from "react-icons/io";
 import { useAppContext } from "../../context/appContext";
 
 export default function Navbar() {
-  const { showNav, toggleNav } = useAppContext();
+  const { toggleNav } = useAppContext();
 
   return (
     <Wrapper>

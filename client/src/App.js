@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Layout } from "./components";
-import { Landing } from "./pages";
+import { Landing, Register } from "./pages";
 
 function App() {
   return (
@@ -10,6 +10,7 @@ function App() {
           <Route index element="" />
         </Route>
         <Route path="/landing" element={<Landing />} />
+        <Route path="/register" element={<Register />} />
       </Routes>
     </BrowserRouter>
   );

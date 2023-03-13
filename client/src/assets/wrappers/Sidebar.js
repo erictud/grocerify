@@ -10,7 +10,7 @@ const Wrapper = styled.nav`
     top: 0;
     left: 0;
     z-index: 5;
-    animation: showNav 1s ease;
+    animation: showNav 0.5s ease;
   }
 
   .show-nav {
@@ -21,8 +21,8 @@ const Wrapper = styled.nav`
     cursor: pointer;
     position: absolute;
     top: 2%;
-    left: 4%;
-    font-size: 3rem;
+    left: 5.5%;
+    font-size: 4rem;
     font-weight: 700;
     background-color: transparent;
     border: none;
@@ -121,6 +121,32 @@ const Wrapper = styled.nav`
     to {
       opacity: 1;
       transform: translateX(0rem);
+    }
+  }
+
+  /* MEDIA QUERIES */
+
+  @media (max-width: 1200px) {
+    .nav-container {
+      width: 30vw;
+    }
+  }
+
+  @media (max-width: 900px) {
+    .nav-container {
+      width: 40vw;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .nav-container {
+      width: 50vw;
+    }
+  }
+
+  @media (max-width: 450px) {
+    .nav-container {
+      width: 80vw;
     }
   }
 `;

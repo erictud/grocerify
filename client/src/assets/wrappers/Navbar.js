@@ -5,7 +5,7 @@ const Wrapper = styled.header`
     position: fixed;
     top: 0;
     left: 0;
-    padding: 0 2rem;
+    padding: 2rem;
     width: calc(100% - 3rem);
     display: flex;
     flex-direction: row;
@@ -50,6 +50,22 @@ const Wrapper = styled.header`
 
     svg {
       font-size: 2rem;
+    }
+  }
+
+  @media (max-width: 700px) {
+    .title {
+      display: none;
+    }
+
+    .user-container {
+      h4 {
+        font-size: 1.5rem;
+      }
+      h3 {
+        font-size: 1.5rem;
+        padding: 0.85rem 1.25rem;
+      }
     }
   }
 `;
