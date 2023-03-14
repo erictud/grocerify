@@ -57,10 +57,13 @@ p {
   --red-dark: #842029;
   --blue-light: #67e8f9;
   --blue-dark: #0369a1;
+  --green-light: #d1e7dd;
+  --green-dark: #0f5132;
 }
 
 /* GENERAL STYLES */
 
+/* BUTTON STYLES */
 button:disabled {
   cursor: not-allowed;
 }
@@ -94,4 +97,43 @@ button:disabled {
 .full-page {
   height: 100vh;
   max-width: 100vw;
+}
+
+/* ALERT STYLES */
+
+.alert {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  gap: 1rem;
+  min-width: 80%;
+  padding: 1rem;
+}
+
+.alert svg {
+  font-size: 3rem;
+}
+
+.alert p {
+  font-size: 1.5rem;
+  text-transform: lowercase;
+}
+
+.success {
+  background-color: var(--green-light);
+  border: 1px solid var(--green-dark);
+}
+
+.success svg {
+  color: var(--primary-700);
+}
+
+.error {
+  background-color: var(--red-light);
+  border: 1px solid var(--red-dark);
+}
+
+.error svg {
+  color: var(--red-dark);
 }

@@ -18,6 +18,7 @@ const Wrapper = styled.div`
   input {
     width: 36.5rem;
     height: 3rem;
+    padding: 0.5rem;
     font-size: 2rem;
     outline: none;
     border: 1px solid var(--secondary-800);
