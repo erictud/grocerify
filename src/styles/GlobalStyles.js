@@ -114,6 +114,18 @@ export const GlobalStyles = createGlobalStyle`
   html {
     font-size: 62.5%;
   }
+
+  @media (min-width: 640px){
+    html{
+      font-size: 12px;
+    }
+  }
+
+  @media (min-width: 900px){
+    html{
+      font-size: 14px;
+    }
+  }
   
   body {
     font-family: "Poppins", sans-serif;
@@ -148,10 +160,9 @@ export const GlobalStyles = createGlobalStyle`
   }
   
   input:focus,
-  button:focus,
   textarea:focus,
   select:focus {
-    outline: 2px solid var(--color-brand-600);
+    outline: 2px solid var(--color-brand-100);
     outline-offset: -1px;
   }
   
