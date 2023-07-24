@@ -51,7 +51,14 @@ const Error = styled.p`
   gap: 0.2rem;
 `;
 
-export default function PasswordInput({ label = "password", value, onChange, error = "", id }) {
+export default function PasswordInput({
+  label = "password",
+  value,
+  onChange,
+  error = "",
+  id,
+  disabled,
+}) {
   const [showPassword, setShowPassword] = useState(false);
 
   return (
@@ -63,6 +70,7 @@ export default function PasswordInput({ label = "password", value, onChange, err
           value={value}
           onChange={onChange}
           id={id}
+          disabled={disabled}
         />
         <span role="button" onClick={() => setShowPassword((prev) => !prev)}>
           {showPassword ? <HiOutlineEyeSlash /> : <HiOutlineEye />}

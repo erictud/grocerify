@@ -41,11 +41,17 @@ const Error = styled.p`
   gap: 0.2rem;
 `;
 
-export default function Input({ label, value, onChange, type = "text", error = "", id }) {
+export default function Input({ label, value, onChange, type = "text", error = "", id, disabled }) {
   return (
     <StyledInputContainer>
       <StyledLabel htmlFor={id || label}>{label}</StyledLabel>
-      <StyledInput type={type} value={value} onChange={onChange} id={id || label} />
+      <StyledInput
+        type={type}
+        value={value}
+        onChange={onChange}
+        id={id || label}
+        disabled={disabled}
+      />
       {error && (
         <Error>
           <HiOutlineMinusCircle />

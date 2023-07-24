@@ -155,7 +155,7 @@ export const GlobalStyles = createGlobalStyle`
   
   select:disabled,
   input:disabled {
-    background-color: var(--color-grey-200);
+    background-color: var(--color-grey-300);
     color: var(--color-grey-500);
   }
   

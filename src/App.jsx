@@ -52,10 +52,11 @@ function App() {
             duration: 5000,
           },
           style: {
-            fontSize: "16px",
+            fontSize: "1.2rem",
             maxWidth: "500px",
             padding: "16px 24px",
             backgroundColor: "var(--color-grey-0)",
+            textAlign: "center",
             color: "var(--color-grey-700)",
           },
         }}

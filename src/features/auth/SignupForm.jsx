@@ -6,6 +6,9 @@ import FileInput from "../../ui/FileInput";
 import PasswordInput from "../../ui/PasswordInput";
 import Button from "../../ui/Button";
 
+import { useSignUp } from "./useSignUp";
+import SpinnerMini from "../../ui/SpinnerMini";
+
 const Form = styled.form`
   display: flex;
   flex-direction: column;
@@ -18,17 +21,21 @@ const Form = styled.form`
 `;
 
 export default function SignupForm() {
+  // form state
   const [email, setEmail] = useState("");
   const [username, setUsername] = useState("");
-  const [password, setPassword] = useState("");
-  const [passwordConfirm, setPasswordConfirm] = useState("");
+  const [password, setPassword] = useState("12345678");
+  const [passwordConfirm, setPasswordConfirm] = useState("12345678");
   const [pfp, setPfp] = useState("");
 
-  // error states
+  // error state
   const [emailError, setEmailError] = useState("");
   const [usernameError, setUsernameError] = useState("");
   const [passwordError, setPasswordError] = useState("");
   const [passwordConfirmError, setPasswordConfirmError] = useState("");
+
+  // signup functionality
+  const { signup, isLoading } = useSignUp();
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -69,7 +76,7 @@ export default function SignupForm() {
         pfp,
       };
 
-    console.log(user);
+    signup(user);
   }
 
   return (
@@ -80,6 +87,7 @@ export default function SignupForm() {
         value={email}
         onChange={(e) => setEmail(e.target.value)}
         error={emailError}
+        disabled={isLoading}
       />
       <Input
         label="username"
@@ -87,12 +95,14 @@ export default function SignupForm() {
         value={username}
         onChange={(e) => setUsername(e.target.value)}
         error={usernameError}
+        disabled={isLoading}
       />
       <PasswordInput
         value={password}
         label="password"
         onChange={(e) => setPassword(e.target.value)}
         error={passwordError}
+        disabled={isLoading}
       />
       <PasswordInput
         value={passwordConfirm}
@@ -100,15 +110,17 @@ export default function SignupForm() {
         id="passwordConfirm"
         onChange={(e) => setPasswordConfirm(e.target.value)}
         error={passwordConfirmError}
+        disabled={isLoading}
       />
       <FileInput
         id="pfp"
         label="Profile Picture (optional)"
         onChange={(e) => setPfp(e.target.files[0])}
         accept="image/*"
+        disabled={isLoading}
       />
-      <Button size="small" variation="primary">
-        Create account
+      <Button size="small" variation="primary" disabled={isLoading}>
+        {isLoading ? <SpinnerMini /> : "Create account"}
       </Button>
     </Form>
   );

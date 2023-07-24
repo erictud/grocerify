@@ -38,7 +38,7 @@ const StyledFileInput = styled.input.attrs({ type: "file" })`
   }
 `;
 
-export default function FillInput({ onChange, value, id, label, accept }) {
+export default function FillInput({ onChange, value, id, label, accept, disabled }) {
   return (
     <StyledInputContainer>
       <StyledLabel htmlFor={id || label}>{label}</StyledLabel>
@@ -47,6 +47,7 @@ export default function FillInput({ onChange, value, id, label, accept }) {
         value={value}
         onChange={onChange}
         type="file"
+        disabled={disabled}
         accept={accept}
       />
     </StyledInputContainer>
